@@ -17,10 +17,10 @@
             android:id="@+id/todoCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
-            tool:text="This is an simple Task inside the application"
+            android:buttonTint="@android:color/holo_red_dark"
             android:paddingStart="8dp"
-            android:buttonTint="@android:color/holo_red_dark"/>
+            android:textSize="20sp"
+            tool:text="This is an simple Task inside the application" />
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

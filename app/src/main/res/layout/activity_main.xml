@@ -38,8 +38,8 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="173dp"
         android:layout_marginBottom="35dp"
-        android:backgroundTint="@android:color/holo_green_dark"
-        android:src="@drawable/baseline_add_24" />
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:src="@drawable/add" />
 
 
 </RelativeLayout>
