@@ -8,12 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import androidx.recyclerview.widget.RecyclerView
+import com.example.task_management_app.AddNewTask
 import com.example.task_management_app.MainActivity
 import com.example.task_management_app.Model.ToDoModel
 import com.example.task_management_app.R
-
-
-
+import com.example.task_management_app.Utils.DatabaseHandler
 
 
 class ToDoAdapter(private val db: DatabaseHandler, private val activity: MainActivity) :
