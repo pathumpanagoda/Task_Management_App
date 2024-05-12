@@ -20,7 +20,7 @@
             android:textSize="20sp"
             tool:text="This is an simple Task inside the application"
             android:paddingStart="8dp"
-            android:buttonTint="@android:color/holo_blue_bright"/>
+            android:buttonTint="@android:color/holo_red_dark"/>
     </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

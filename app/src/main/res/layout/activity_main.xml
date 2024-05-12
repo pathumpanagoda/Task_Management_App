@@ -36,9 +36,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@android:color/holo_blue_bright"
+        android:layout_marginEnd="173dp"
+        android:layout_marginBottom="35dp"
+        android:backgroundTint="@android:color/holo_green_dark"
         android:src="@drawable/baseline_add_24" />
 
 
