@@ -10,16 +10,18 @@
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+        android:background="#8C0404"
         android:padding="8dp">
 
         <CheckBox
             android:id="@+id/todoCheckBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:buttonTint="@android:color/holo_red_dark"
+            android:buttonTint="@android:color/darker_gray"
             android:paddingStart="8dp"
             android:textSize="20sp"
+            android:textColor="@color/colorPrimary"
             tool:text="This is an simple Task inside the application" />
     </RelativeLayout>
 
