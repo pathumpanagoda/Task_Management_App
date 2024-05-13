@@ -5,6 +5,7 @@
     <string name="tasks">Tasks</string>
 
     <string-array name="priority_array">
+        <item>All</item>
         <item>Low</item>
         <item>Medium</item>
         <item>High</item>
