@@ -1,6 +1,5 @@
 package com.example.task_management_app.Adapter
 
-
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,7 +13,6 @@ import com.example.task_management_app.MainActivity
 import com.example.task_management_app.Model.ToDoModel
 import com.example.task_management_app.R
 import com.example.task_management_app.Utils.DatabaseHandler
-
 
 class ToDoAdapter(private val db: DatabaseHandler, private val activity: MainActivity) :
     RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
@@ -43,7 +41,7 @@ class ToDoAdapter(private val db: DatabaseHandler, private val activity: MainAct
             else -> holder.taskContainer.setBackgroundResource(android.R.color.transparent)
         }
 
-        holder.task.setOnCheckedChangeListener { buttonView, isChecked ->
+        holder.task.setOnCheckedChangeListener { _, isChecked ->
             val newStatus = if (isChecked) 1 else 0
             db.updateStatus(item.id, newStatus)
         }
@@ -66,8 +64,6 @@ class ToDoAdapter(private val db: DatabaseHandler, private val activity: MainAct
                 deleteItem(adapterPosition)
                 true
             }
-
-
         }
     }
 
@@ -98,14 +94,13 @@ class ToDoAdapter(private val db: DatabaseHandler, private val activity: MainAct
     }
 
     // Filter tasks based on search query
-    fun filterTasks(query: String) {
+    fun filterTasks(priority: String) {
         filteredList.clear()
-        if (query.isEmpty()) {
-            filteredList.addAll(todoList) // Show all tasks if query is empty
+        if (priority.equals("All", ignoreCase = true)) {
+            filteredList.addAll(todoList) // Show all tasks if priority is empty
         } else {
-            val lowerCaseQuery = query.toLowerCase()
             todoList.forEach { task ->
-                if (task.task!!.toLowerCase().contains(lowerCaseQuery)) {
+                if (task.priority.equals(priority, ignoreCase = true)) {
                     filteredList.add(task)
                 }
             }
